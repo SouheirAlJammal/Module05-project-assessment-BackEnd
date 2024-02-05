@@ -9,7 +9,6 @@ import {
   getProduct,
   editProduct,
   searchByProductName,
-  filterProducts
 } from "../controllers/productController.js";
 
 export const productRoutes = Router();
@@ -18,6 +17,5 @@ productRoutes.post("/addProduct", uploadImage.single("image"), authenticate, isA
 productRoutes.delete("/deleteProduct", authenticate, isAdmin, deleteProduct);
 productRoutes.get("/AllProducts", getProducts);
 productRoutes.post("/search", searchByProductName);
-productRoutes.post("/filter", filterProducts);
 productRoutes.get("/byId/:slug", getProduct);
 productRoutes.patch("/editProduct", uploadImage.single("image"),  authenticate, isAdmin,editProduct);

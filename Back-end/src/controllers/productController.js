@@ -150,6 +150,5 @@ export {
   getProducts,
   getProduct,
   editProduct,
-  searchByProductName,
-  filterProducts,
+  searchByProductName
 };
